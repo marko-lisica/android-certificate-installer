@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Cert Installer Test UI</string>
+    <string name="app_header">Delegated Certificate Installer</string>
+    <string name="status_label">Current Status:</string>
+    <string name="status_initial">Checking delegation status...</string>
+    <string name="install_button">Attempt Certificate Installation</string>
+    <string name="instructions">1. If delegation is NOT granted, configure your EMM to delegate \'android.app.admin.DevicePolicyManager.DELEGATION_CERT_INSTALL\' scope to this app.\n2. Once granted, the button will become active.\n3. Requires \'my_keystore.p12\' in res/raw/ and \'YOUR_PASSWORD\' in CertificateInstaller.kt.</string>
+</resources>
