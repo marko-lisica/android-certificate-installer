@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restrictions xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+    Managed Configuration Schema for Certificate Installation
+    Allows EMM/MDM to configure download URLs and credentials
+    All fields are REQUIRED - the app will not function without these values
+    -->
+
+    <!-- Certificate Download URL (REQUIRED) -->
+    <restriction
+        android:key="cert_download_url"
+        android:title="@string/restriction_cert_url_title"
+        android:description="@string/restriction_cert_url_desc"
+        android:restrictionType="string" />
+
+    <!-- CA Certificate Download URL (REQUIRED) -->
+    <restriction
+        android:key="ca_cert_download_url"
+        android:title="@string/restriction_ca_url_title"
+        android:description="@string/restriction_ca_url_desc"
+        android:restrictionType="string" />
+
+    <!-- PKCS#12 Password (REQUIRED) -->
+    <restriction
+        android:key="p12_password"
+        android:title="@string/restriction_p12_password_title"
+        android:description="@string/restriction_p12_password_desc"
+        android:restrictionType="string" />
+
+</restrictions>

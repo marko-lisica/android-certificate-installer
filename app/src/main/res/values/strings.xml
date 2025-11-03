@@ -4,5 +4,12 @@
     <string name="status_label">Current Status:</string>
     <string name="status_initial">Checking delegation status...</string>
     <string name="install_button">Attempt Certificate Installation</string>
-    <string name="instructions">1. If delegation is NOT granted, configure your EMM to delegate \'android.app.admin.DevicePolicyManager.DELEGATION_CERT_INSTALL\' scope to this app.\n2. Once granted, the button will become active.\n3. Requires \'my_keystore.p12\' in res/raw/ and \'YOUR_PASSWORD\' in CertificateInstaller.kt.</string>
+
+    <!-- App Restrictions / Managed Configuration strings -->
+    <string name="restriction_cert_url_title">Certificate Download URL</string>
+    <string name="restriction_cert_url_desc">URL to download the PKCS#12 certificate file</string>
+    <string name="restriction_ca_url_title">CA Certificate Download URL</string>
+    <string name="restriction_ca_url_desc">URL to download the CA certificate file</string>
+    <string name="restriction_p12_password_title">PKCS#12 Password</string>
+    <string name="restriction_p12_password_desc">Password for the PKCS#12 certificate file</string>
 </resources>

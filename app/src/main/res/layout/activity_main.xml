@@ -1,75 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="32dp"
-    android:gravity="center_horizontal"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/headerTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_header"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Installed CA Certificates (CN &amp; Serial):"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="32dp"
+        android:paddingTop="72dp"
+        android:paddingEnd="32dp"
+        android:paddingBottom="32dp">
 
-    <TextView
-        android:id="@+id/caListTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Checking certificate list..."
-        android:textSize="14sp"
-        android:textColor="@color/gray"
-        android:padding="8dp"
-        android:background="#f0f0f0"
-        android:minLines="2"
-        android:scrollbars="vertical"
-        android:maxLines="6"
-        android:layout_marginBottom="16dp" />
-    <TextView
-        android:id="@+id/statusLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/status_label"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp" />
+        <Button
+            android:id="@+id/viewCertificatesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
+            android:text="View Certificates"
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/statusTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/status_initial"
-        android:textSize="18sp"
-        android:textColor="@color/gray"
-        android:padding="8dp"
-        android:layout_marginBottom="32dp"
-        android:background="#f0f0f0" />
+        <TextView
+            android:id="@+id/statusLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/status_label"
+            android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/installButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/install_button"
-        android:textSize="18sp"
-        android:padding="12dp"
-        android:enabled="false" />
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:background="#f0f0f0"
+            android:padding="8dp"
+            android:text="@string/status_initial"
+            android:textColor="@color/gray"
+            android:textSize="18sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/instructions"
-        android:textSize="14sp" />
+        <Button
+            android:id="@+id/installButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:padding="12dp"
+            android:text="@string/install_button"
+            android:textSize="14sp" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/installCaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:padding="12dp"
+            android:text="Install CA Certificate"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Remove Certificate"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/aliasEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Enter certificate alias (e.g., cert1)"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/removeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:enabled="false"
+            android:padding="12dp"
+            android:text="Remove Certificate"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Configuration (Managed App Config)"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/configTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#f0f0f0"
+            android:maxLines="6"
+            android:minLines="3"
+            android:padding="12dp"
+            android:scrollbars="vertical"
+            android:text="Loading configuration..."
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</ScrollView>

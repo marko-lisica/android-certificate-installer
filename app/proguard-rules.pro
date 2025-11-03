@@ -14,8 +14,16 @@
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+-keepattributes SourceFile,LineNumberTable
 
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Keep all activities
+-keep class com.lisica.certinstaller.MainActivity { *; }
+-keep class com.lisica.certinstaller.CertificateListActivity { *; }
+
+# Keep CertificateInstaller and nested classes
+-keep class com.lisica.certinstaller.CertificateInstaller { *; }
+-keep class com.lisica.certinstaller.CertificateInstaller$** { *; }

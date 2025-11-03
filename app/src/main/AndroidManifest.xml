@@ -5,6 +5,9 @@
     <!-- REQUIRED for the modern AppCompatActivity theme and features -->
     <uses-sdk tools:overrideLibrary="androidx.appcompat, androidx.core" />
 
+    <!-- REQUIRED for downloading certificates from remote server -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +24,21 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <!-- Managed Configuration (App Restrictions) -->
+            <meta-data
+                android:name="android.content.APP_RESTRICTIONS"
+                android:resource="@xml/app_restrictions" />
         </activity>
+
+        <!-- Certificate list viewer activity -->
+        <activity
+            android:name=".CertificateListActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:label="Certificates"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
     </application>
 
 </manifest>
